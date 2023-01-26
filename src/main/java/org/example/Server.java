@@ -5,7 +5,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.net.InetSocketAddress;
 
-public class Main {
+public class Server {
 
     public static void main(String[] args) throws Exception {
 
@@ -19,6 +19,6 @@ public class Main {
         Reaktor reaktor = Reaktor.getInstance();
         reaktor.init(demux, new PrihvatiVezuRukovateljDogadjajem());
 
-        reaktor.handle_events();
+        reaktor.obradjujDogadjaje();
     }
 }
